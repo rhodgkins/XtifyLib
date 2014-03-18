@@ -16,4 +16,8 @@ Pod::Spec.new do |s|
   s.frameworks = 'Foundation', 'UIKit', 'CoreGraphics', 'SystemConfiguration', 'MapKit', 'CoreData', 'MessageUI', 'CoreLocation', 'CFNetwork', 'MobileCoreServices', 'CoreTelephony'
   s.library = 'xml2.2', 'z'
   s.xcconfig = { 'ARCHS' => '$ARCHS_STANDARD_32_BIT' }
+  s.prepare_command = <<-CMD
+  	curl -sSL http://developer.xtify.com/download/attachments/5440150/xtify-ios-sdk-#{s.version.to_s}.zip > source.zip
+  	ls -laf
+  	CMD
 end
