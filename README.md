@@ -2,6 +2,10 @@ XtifyLib
 ========
 This is a empty repo for use with the Xtify cocoapod. Instead of having a repo where the source has to be maintained by downloading from Xtify on an update the podspec takes care of that.
 
+The main purpose of this library is to remove the dependancy on `ASIHTTPRequest` and other old libraries.
+
+When updating the podspec, the only thing that needs to be changed is the version to the new Xtify release.
+
 ##Usage##
 Either subclass `XLXtifyOptions` or use an instance directly setting the iVars. Any existing installations as described in the [previous pod spec](https://github.com/sstepashka/XtifyLib#example-of-usage) will still work and `XLXtifyOptions` can be used as is with `+[XLXtifyOptions getXtifyOptions]`.
 
