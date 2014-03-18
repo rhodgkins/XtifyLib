@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   }
   s.license =  { :type => 'Apache License, Version 2.0', :file => 'Source/license/LA_en.rtf' }
   s.homepage = 'http://developer.xtify.com/display/sdk/Download+the+IBM+Push+Notification+SDKs'
-  s.source = { :git => 'https://github.com/rhodgkins/XtifyLib.git', :tag => 'release' }
+  s.source = { :http => 'https://github.com/rhodgkins/XtifyLib/raw/master/empty.zip' }
 
   s.source_files = 'Source/XtifyLib/**/*.{h,m}',
   s.vendored_frameworks = 'Source/XtifyLib/XtifyPush.embeddedframework/XtifyPush.framework'
