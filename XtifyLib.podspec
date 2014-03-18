@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   }
   s.license =  { :type => 'Apache License, Version 2.0', :file => 'Source/license/LA_en.rtf' }
   s.homepage = 'http://developer.xtify.com/display/sdk/Download+the+IBM+Push+Notification+SDKs'
-  s.source = { :git => 'https://github.com/rhodgkins/XtifyLib.git', :tag => s.version.to_s }
+  s.source = { :git => 'https://github.com/rhodgkins/XtifyLib.git', :tag => 'release' }
 
   s.source_files = 'Source/XtifyLib/**/*.{h,m}',
   s.vendored_frameworks = 'Source/XtifyLib/XtifyPush.embeddedframework/XtifyPush.framework'
@@ -17,7 +17,8 @@ Pod::Spec.new do |s|
   s.library = 'xml2.2', 'z'
   s.xcconfig = { 'ARCHS' => '$ARCHS_STANDARD_32_BIT' }
   s.prepare_command = <<-CMD
-  	curl -sSL http://developer.xtify.com/download/attachments/5440150/xtify-ios-sdk-#{s.version.to_s}.zip > source.zip
-  	ls -laf
+  		curl -sSL -o xtify-ios-sdk.zip http://developer.xtify.com/download/attachments/5440150/xtify-ios-sdk-#{s.version.to_s}.zip
+  		unzip -qq xtify-ios-sdk.zip
+  		mv xtify-ios-sdk-#{s.version.to_s} Source
   	CMD
 end
