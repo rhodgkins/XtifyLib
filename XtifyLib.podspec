@@ -1,6 +1,13 @@
 Pod::Spec.new do |s|
+
+	# Xtify release version
+	version = '2.57'
+	# Page ID of the release, see http://developer.xtify.com/pages/viewpreviousversions.action?pageId=5440150
+	pageID = 5440150
+
   s.name         = 'XtifyLib'
-  s.version      = '2.57'
+  # Change the version to the new one
+  s.version      = version
   s.summary      = 'Xtify library for iOS application with CocoaPods integration.'
   s.platform     = :ios, '6.0'
   s.author 		 = {
@@ -20,8 +27,9 @@ Pod::Spec.new do |s|
   
   s.xcconfig = { 'ARCHS' => '$ARCHS_STANDARD_32_BIT' }
   
+  # This downloads the ZIP direct from Xtify and extras it using it as the source
   s.prepare_command = <<-CMD
-  		curl -sSL -o xtify-ios-sdk.zip http://developer.xtify.com/download/attachments/5440150/xtify-ios-sdk-#{s.version.to_s}.zip
+  		curl -sSL -o xtify-ios-sdk.zip http://developer.xtify.com/download/attachments/#{pageID}/xtify-ios-sdk-#{s.version.to_s}.zip
   		unzip -qq xtify-ios-sdk.zip
   		mv xtify-ios-sdk-#{s.version.to_s} Source
   	CMD
