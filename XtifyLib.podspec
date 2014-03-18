@@ -15,4 +15,5 @@ Pod::Spec.new do |s|
   s.preserve_paths = 'Source/XtifyLib/XtifyPush.embeddedframework/XtifyPush.framework/*', 'Source/copyright.txt'
   s.frameworks = 'Foundation', 'UIKit', 'CoreGraphics', 'SystemConfiguration', 'MapKit', 'CoreData', 'MessageUI', 'CoreLocation', 'CFNetwork', 'MobileCoreServices', 'CoreTelephony'
   s.library = 'xml2.2', 'z'
+  s.xcconfig = { 'ARCHS' => '$ARCHS_STANDARD_32_BIT' }
 end
