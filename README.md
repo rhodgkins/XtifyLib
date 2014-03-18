@@ -20,7 +20,7 @@ Either subclass `XLXtifyOptions` or use an instance directly setting the iVars. 
 }
 ```
 
-Or
+Or using a subclass
 
 ``` objective-c
 @interface CustomXtifyOptions : XLXtifyOptions
