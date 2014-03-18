@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Source/XtifyLib/**/*.{h,m}',
   s.vendored_frameworks = 'Source/XtifyLib/XtifyPush.embeddedframework/XtifyPush.framework'
-  s.preserve_paths = 'Source/XtifyLib/XtifyPush.embeddedframework/XtifyPush.framework/*', 'copyright.txt'
+  s.preserve_paths = 'Source/XtifyLib/XtifyPush.embeddedframework/XtifyPush.framework/*', 'Source/copyright.txt'
   s.frameworks = 'Foundation', 'UIKit', 'CoreGraphics', 'SystemConfiguration', 'MapKit', 'CoreData', 'MessageUI', 'CoreLocation', 'CFNetwork', 'MobileCoreServices', 'CoreTelephony'
   s.library = 'xml2.2', 'z'
 end
